@@ -3,3 +3,6 @@ approvaltests
 pytest-approvaltests
 coverage
 mypy
+pylint
+black
+ruff

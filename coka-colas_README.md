@@ -14,3 +14,9 @@ Pour chaque item, une fonction est instanciée. Si des nouveaux types d'items (t
 # Tests
 
 Le fichier "texttest_fixture.py" a été conservé à l'identique et peut être lancé pour vérifier les résultats. Le fichier "unit_tests.py" contient des tests pas-à-pas pour assurer toutes les possibilités de mise à jour pour les différents types d'items.
+
+# Vérification syntaxique
+
+Création du fichier "pylintrc" dans le dossier python via la commande "pylint --generate-rcfile > chemin".
+Il est placé dans le dossier python dans le cas on veuille utiliser le même repo mais avec un autre langage.
+Les parties modifiées du pylintrc sont à [MESSAGES CONTROL] (faire un Ctrl+F)

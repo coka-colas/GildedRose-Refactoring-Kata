@@ -1,14 +1,14 @@
 # utf-8
 
 class Updater(object):
-    
+
     # Indication des min et max qualité
     MIN_QUALITY = 0
     MAX_QUALITY = 50
 
     # En premier on crée la règle générale pour TOUS les items
     def normal_item(self, item):
-        if item.sell_in > 0: 
+        if item.sell_in > 0:
             depreciation = -1
         else:
             depreciation = -2
@@ -23,11 +23,11 @@ class Updater(object):
             appreciation = 2
         item.quality = min((item.quality + appreciation), self.MAX_QUALITY)
         item.sell_in += -1
-    
+
     # On passe pour l'item légendaire
     def sulfuras(self, item):
         pass
-    
+
     # Règle spéciale pour les places en backstage
     def backstage_passes(self, item):
 
@@ -66,7 +66,9 @@ class GildedRose(object):
     def update_quality(self):
         updater = Updater()
 
-        # On applique maintenant les règles spéciales, en commençant par les plus spécifiques pour finir avec la règle générale dans le 'else' pour couvrir tous les cas
+        # On applique maintenant les règles spéciales, 
+        # en commençant par les plus spécifiques pour 
+        # finir avec la règle générale dans le 'else' pour couvrir tous les cas
         for item in self.items:
             if item.name == 'Aged Brie':
                 updater.aged_brie(item)
